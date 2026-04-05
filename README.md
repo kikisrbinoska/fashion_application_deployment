@@ -182,23 +182,6 @@ kubectl logs -f postgres-0 -n fashion-app
 
 ## Configuration
 
-### Environment Variables
-
-#### Backend (ConfigMap: backend-config)
-```yaml
-SPRING_PROFILES_ACTIVE: "prod"
-SPRING_DATASOURCE_URL: "jdbc:postgresql://postgres-primary.fashion-app.svc.cluster.local:5432/postgres"
-SPRING_DATASOURCE_READONLY_URL: "jdbc:postgresql://postgres-readonly.fashion-app.svc.cluster.local:5432/postgres"
-```
-
-#### Database Credentials (Secret: db-secret)
-```yaml
-username: postgres
-password: kikis
-database: postgres
-replicator-username: replicator
-replicator-password: replica2026
-```
 
 ### Scaling
 
